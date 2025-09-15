@@ -32,7 +32,7 @@ The **Inverse Kinematics (IK) problem** is fundamentally *multi-modal*—for a g
 Recognizing the limitations in learning direct IK mappings for high-DOF robots, we first sought to implement a classifier for a 6-DOF manipulator that could categorize various postures (and thus regions of 3D space) into labels that reflect the quality of the posture, determined by the inverse condition number of the Jacobian matrix (the matrix that maps joint-space angular velocities to task-space end-effector velocities) corresponding to the position. More specifically, the inverse condition number of the Jacobian
 
 $$
-\kappa^{-1} \=\ \frac{\sigma_{\min}}{\sigma_{\max}}
+\kappa^{-1} \= \frac{\sigma_{min}}{\sigma_{max}}
 $$
 
 
@@ -46,7 +46,7 @@ $$
 Can also be expressed as the product of the singular values of J:
 
 $$
-w \=\ \prod_{i=1}^{m} \sigma_{i}
+w = \prod_{i=1}^{m} \sigma_{i}
 $$
 
 Manipulability refers to a scalar measure of how easily a robot’s end-effector can move in different directions from a given posture. Thus, it can be important for trajectory planning for the robot to know ahead of time if a trajectory passes through a singular, or poorly conditioned point or region. Additionally, we sought to train the model to identify regions that were not reachable (i.e. no IK solutions) by inference as opposed to running kinematics at runtime, which can be slow and expensive. The classifier we built aimed to label points with the following categories: unreachable (either outside maximum reach or within arm reach but unreachable due to robot geometry), reachable but near a singularity, reachable and adequately-conditioned,and reachable and highly maniputable.
@@ -266,27 +266,7 @@ For conditioning classification, the results were more mixed. The other three ca
 
 Overall, the classifier showed good potential for trajectory planning and robotic control applications. Improvements made to the dataset and perhaps a deeper model structure with dynamically optimized learning rate could certainly help to drive up accuracy and confidence in the future. Even now, the model’s relatively high accuracy could allow for controller implementation, perhaps passing the label prediction and a loss/confidence estimate with an IK call only occurring if loss is above a certain threshold. The model as it stands now can certainly be trusted to reduce IK calls in trajectory planning by as much as 95%.
 
-## 
-
-## 7\. Gantt Chart and Team Member Contributions
-
-![Enter image alt description](./images/Gantt.png)
-
-Figure 14: Gantt Chart
-
-Table 3\. Contribution Table
-
-| Name | Contributions |
-| :---: | ----- |
-| Yash Tahilliani | Designed and implemented data generation strategy for 6DOF and 4DOF robots in PyBullet. Drafted results, discussion, and supervised learning sections. |
-| Terry Barrigah | Formatted proposal and final report content for GitHub and Streamlit. Managed citations, references, and project documentation. |
-| Joao Pedro Fonseca | Led the design and development of the 4DOF IK model (regression/classification). Drafted core sections of the final report, including the ML pipeline, technical methodology, and experimental evaluation for the 4DOF model. Ran and analyzed model experiments. |
-| Anand Nagpurkar | Developed and validated the training and evaluation pipelines for the 6DOF classifier. Implemented performance visualization, tuning, and ablation studies for the classifier. Assisted with report writing and contributed to discussion/analysis sections. |
-| Jackson Merrick | Led the development of the 6DOF classifier: conducted literature review, wrote code for reachability/conditioning labeling, implemented classifier architecture, and analyzed classification metrics. Verified model correctness. |
-
-## 
-
-## 8\. References
+## 7\. References
 
 \[1\] F. L. Tagliani, N. Pellegrini, and F. Aggogeri, “Machine learning sequential methodology for robot inverse kinematic modelling,” Applied Sciences, vol. 12, no. 19, p. 9417, Sep. 2022\. doi:10.3390/app12199417
 
