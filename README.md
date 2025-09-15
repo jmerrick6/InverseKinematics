@@ -1,5 +1,5 @@
 # Project Overview
-This project implements an inverse kinematic pipeline: data generation, preprocessing, model training, evaluation, and visualization.
+This project implements a pipeline for estimating robotic arm inverse kinematic solutions using machine learning: data generation, preprocessing, model training, evaluation, and visualization.
 
 ## File Reference
 
