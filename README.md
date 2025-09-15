@@ -1,5 +1,4 @@
 # Project Overview
-***The datasets used in this project are too big for GitHub and can be found HERE: https://gtvault-my.sharepoint.com/:f:/g/personal/jmerrick6_gatech_edu/EhmSNB8IPVREjVSvJbh8kJIBmFvK9uILi26T9vTdv4-oEA?e=ta1Ajw***
 This project implements an inverse kinematic pipeline: data generation, preprocessing, model training, evaluation, and visualization.
 
 ## File Reference
