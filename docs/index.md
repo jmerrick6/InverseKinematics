@@ -32,7 +32,7 @@ The **Inverse Kinematics (IK) problem** is fundamentally *multi-modal*—for a g
 Recognizing the limitations in learning direct IK mappings for high-DOF robots, we first sought to implement a classifier for a 6-DOF manipulator that could categorize various postures (and thus regions of 3D space) into labels that reflect the quality of the posture, determined by the inverse condition number of the Jacobian matrix (the matrix that maps joint-space angular velocities to task-space end-effector velocities) corresponding to the position. More specifically, the inverse condition number of the Jacobian
 
 $$
-\kappa^{-1} \= \frac{\sigma_{min}}{\sigma_{max}}
+\kappa^{-1} = \frac{\sigma_{min}}{\sigma_{max}}
 $$
 
 
