@@ -1,6 +1,6 @@
 
 ---
-# Inverse Kinematics Approximation Using Machine Learning
+title: Inverse Kinematics Approximation Using Machine Learning
 ---
 
 ## 1. Introduction / Background
