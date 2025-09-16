@@ -1,5 +1,7 @@
 # Project Overview
-This project implements a pipeline for estimating robotic arm inverse kinematic solutions using machine learning: data generation, preprocessing, model training, evaluation, and visualization.
+This project implements a pipeline for estimating robotic arm inverse kinematic solutions using machine learning: data generation, preprocessing, model training, evaluation, and visualization. 
+
+## Read the paper [here]([https://example.com](https://jmerrick6.github.io/InverseKinematics/))
 
 ## File Reference
 
